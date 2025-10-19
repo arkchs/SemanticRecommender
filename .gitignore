@@ -1,0 +1,5 @@
+/backend/_pycache_/
+/backend/.env/
+/frontend/node_modules/
+/notebooks/
+.venv/

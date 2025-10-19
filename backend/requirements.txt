@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+requests
+numpy
+pandas
+scikit-learn
+langchain
+sentence-transformers
+pillow
+python-multipart
+pinecone-client
+faiss-cpu
+jinja2
+pydantic
