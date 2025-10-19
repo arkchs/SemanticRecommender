@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+const SERVER_ENDPOINT = process.env.SERVER_ENDPOINT;
 export default function Recommend() {
   const [q, setQ] = useState("");
   const [results, setResults] = useState([]);
@@ -11,7 +11,7 @@ export default function Recommend() {
     setLoading(true);
     try {
       const res = await axios.get(
-        `http://localhost:8000/recommend?q=${encodeURIComponent(q)}`
+        `${SERVER_ENDPOINT}/recommend?q=${encodeURIComponent(q)}`
       );
       setResults(res.data.results || []);
     } catch (err) {

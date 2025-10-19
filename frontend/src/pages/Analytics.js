@@ -7,7 +7,7 @@ import {
   CategoryScale,
   LinearScale,
 } from "chart.js";
-
+const SERVER_ENDPOINT = process.env.SERVER_ENDPOINT;
 ChartJS.register(BarElement, CategoryScale, LinearScale);
 
 export default function Analytics() {
@@ -15,7 +15,7 @@ export default function Analytics() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/analytics/stats")
+      .get("${SERVER_ENDPOINT}/analytics/stats")
       .then((r) => setStats(r.data))
       .catch(console.error);
   }, []);
